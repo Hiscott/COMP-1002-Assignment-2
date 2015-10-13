@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="Content/main.css">
+        <title>Products</title>           
+    </head>
+    
+    <body>
+        <div class="container">
+            <header role="navigation">
+                <nav>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </nav>
+            </header>
+            <main role="main">
+                <article>
+                    <h1>Products</h1>
+                    <p>Here you may order our products!</p>
+                </article>
+                <section>
+                    <form action="processform.php" method="post" id"orderForm" class="forms">
+                        <fieldset class="contact">
+                            <legend>Order Form</legend>
+                            
+                            <!-- Selects for the product of your choice -->
+                            <div class="row formGroup">
+                                <label for="productPick">What product would you like:</label>
+                                <select>
+                                    <option value="Tech1">Rotary Phone</option>
+                                    <option value="tech2">Touch-Tone Phone</option>
+                                    <option value="Tech3">Cellphone</option>
+                                </select>
+                            </div>
+                            
+                            <br>
+                            <!-- These forms prompt the user for their name and address -->
+                            
+                            <div class="row formGroup">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" id="FirstName" name="firstName" class="FormControl" placeholder="Enter Your First Name" required autofocus>
+                            </div>
+                            
+                            <div class="row formGroup">
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" id="lastName" name="lastName" class="FormControl" placeholder="Enter Your Last Name" required autofocus>
+                            </div>
+                            
+                            <div class="row formGroup">
+                                <label for="homeAddress">Home Address:</label>
+                                <input type="text" id="homeAddress" name="homeAddress" class="FormControl" placeholder="123 Street lane, Barrie, Ontario Canada" required autofocus>
+                            </div>
+                            
+                            <!-- requires the user to enter a quantity of >=1 -->                         
+                            <div class="row formGroup">
+                                <label for="Quantity">Quantity:</label>
+                                <input type="number" min="1" id="theQuantity" name="theQuantity" class="FormControl" placeholder="Enter Required Quantity" required autofocus>
+                            </div>
+                            
+                            <br>
+                            
+                            <!-- Radio button for extended warranty -->
+                            <div class="row formGroup">
+                                <input type="radio" name="Warranty" value="waterPlan">Would you like the water protection insurance?<br>
+                                <input type="radio" name="Warranty" value="smashPlan">Would you like the accidental damage Plan?<br>
+                                <input type="radio" name="Warranty" value="extenddedhPlan">Would you like the extended warranty?
+                            </div>
+                            
+                            <br>
+                            
+                            <!-- Checkboxes for TOS/Privacy -->
+                            <div class="row formGroup" required>
+                                <input type="checkbox" name="terms" value="TOS" required autofocus>Do you accept our <a href="#">Terms of Service</a>?<br>
+                                <input type="checkbox" name="terms" value="Privacy" required autofocus>Do you accept our <a href="#">Privacy Policy</a>?
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <div class="row formGroup">
+                                <input type="submit" id="submitButton" name="submitButton" class="button">
+                            </div>
+                        </fieldset>
+                    </form>
+                </section>
+            </main>
+            
+            <br>
+            <hr>
+            
+            <footer>
+                <small>
+                    &copy; Copyright 2015
+                </small>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+@charset "charset-name"
+    
+h2
+{
+    color: navy
+}
+
+body
+{
+    background-color: beige
+}
+
+.FormControl
+{
+    background-color: linen
+}
